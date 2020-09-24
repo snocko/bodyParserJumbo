@@ -1,4 +1,4 @@
-# body-parser-jumbo
+# bodyParserJumbo
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -18,7 +18,7 @@ and `toString` may not be a function and instead a string or other user input.
 ## Installation
 
 ```sh
-$ npm install body-parser-jumbo
+$ npm i body-parser-jumbo
 ```
 
 ## API
@@ -44,8 +44,8 @@ While most JSON parsers assume numeric values have same precision restrictions a
 
 [npm-image]: https://img.shields.io/npm/v/body-parser.svg
 [npm-url]: https://npmjs.org/package/body-parser
-[travis-image]: https://img.shields.io/travis/expressjs/body-parser/master.svg
-[travis-url]: https://travis-ci.org/expressjs/body-parser
+[travis-image]: https://travis-ci.org/snocko/bodyParserJumbo.svg?branch=master
+[travis-url]: https://travis-ci.org/github/snocko/bodyParserJumbo
 [coveralls-image]: https://img.shields.io/coveralls/expressjs/body-parser/master.svg
 [coveralls-url]: https://coveralls.io/r/expressjs/body-parser?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/body-parser.svg
