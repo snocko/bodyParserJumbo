@@ -3,7 +3,6 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
-[![Test Coverage][coveralls-image]][coveralls-url]
 
 Node.js body parsing middleware for BigInt.
 
@@ -34,7 +33,7 @@ The `bodyParserJumbo` Based on Douglas Crockford JSON.js package and bignumber.j
 
 Native Bigint was added to JS recently, so we added an option to leverage it instead of bignumber.js. However, the parsing with native BigInt is kept an option for backward compability.
 
-While most JSON parsers assume numeric values have same precision restrictions as IEEE 754 double, JSON specification does not say anything about number precision. Any floating point number in decimal (optionally scientific) notation is valid JSON value. It's a good idea to serialize values which might fall out of IEEE 754 integer precision as strings in your JSON api, but ```json { "value" : 9223372036854775807}```, for example, is still a valid RFC4627 JSON string, and in most JS runtimes the result of JSON.parse is this object: ```json { value: 9223372036854776000 }```
+While most JSON parsers assume numeric values have same precision restrictions as IEEE 754 double, JSON specification does not say anything about number precision. Any floating point number in decimal (optionally scientific) notation is valid JSON value. It's a good idea to serialize values which might fall out of IEEE 754 integer precision as strings in your JSON api, but ```{ "value" : 9223372036854775807}```, for example, is still a valid RFC4627 JSON string, and in most JS runtimes the result of JSON.parse is this object: ```{ value: 9223372036854776000 }```
 
 
 
