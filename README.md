@@ -42,11 +42,9 @@ While most JSON parsers assume numeric values have same precision restrictions a
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/body-parser.svg
-[npm-url]: https://npmjs.org/package/body-parser
+[npm-image]: https://img.shields.io/npm/v/body-parser-jumbo.svg
+[npm-url]: https://npmjs.org/package/body-parser-jumbo
 [travis-image]: https://travis-ci.org/snocko/bodyParserJumbo.svg?branch=master
 [travis-url]: https://travis-ci.org/github/snocko/bodyParserJumbo
-[coveralls-image]: https://img.shields.io/coveralls/expressjs/body-parser/master.svg
-[coveralls-url]: https://coveralls.io/r/expressjs/body-parser?branch=master
-[downloads-image]: https://img.shields.io/npm/dm/body-parser.svg
-[downloads-url]: https://npmjs.org/package/body-parser
+[downloads-image]: https://img.shields.io/npm/dm/body-parser-jumbo.svg
+[downloads-url]: https://npmjs.org/package/body-parser-jumbo
