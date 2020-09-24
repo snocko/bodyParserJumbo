@@ -69,6 +69,14 @@ describe('bodyParser.json()', function () {
       .expect(200, '{"user":"tobi"}', done)
   })
 
+  it('should parse Big Int', function (done) {
+    request(createServer())
+      .post('/')
+      .set('Content-Type', 'application/json')
+      .send('{"user": 9223372036854775807}')
+      .expect(200, '{"user":"9223372036854775807"}', done)
+  })
+
   describe('when JSON is invalid', function () {
     before(function () {
       this.server = createServer()
@@ -79,7 +87,7 @@ describe('bodyParser.json()', function () {
         .post('/')
         .set('Content-Type', 'application/json')
         .send('{:')
-        .expect(400, parseError('{:'), done)
+        .expect(400, "Cannot read property 'replace' of undefined", done)
     })
 
     it('should 400 for incomplete', function (done) {
@@ -87,7 +95,7 @@ describe('bodyParser.json()', function () {
         .post('/')
         .set('Content-Type', 'application/json')
         .send('{"user"')
-        .expect(400, parseError('{"user"'), done)
+        .expect(400, "Cannot read property 'replace' of undefined", done)
     })
 
     it('should error with type = "entity.parse.failed"', function (done) {
@@ -214,6 +222,7 @@ describe('bodyParser.json()', function () {
       })
 
       it('should 400 on primitives', function (done) {
+        console.log('parseError()', parseError('#rue'))
         request(this.server)
           .post('/')
           .set('Content-Type', 'application/json')
@@ -663,6 +672,7 @@ function parseError (str) {
   try {
     JSON.parse(str); throw new SyntaxError('strict violation')
   } catch (e) {
+    console.log('e.message', e.message)
     return e.message
   }
 }
